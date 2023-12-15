@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:longitudapp="clr-namespace:LongitudApp"
+            x:DataType="longitudapp:AppShell"
+            mc:Ignorable="d"
+            x:Class="LongitudApp.MainPage">
+
+     <!-- Pestaña 1 -->
+      <ContentPage Title="Km a m">
+         <StackLayout>
+
+            <Label
+               Text="Ingrese la distancia en kilómetros:" />
+
+            <Entry
+               x:Name="Kilometros"
+               Placeholder="Ingrese kilómetros" />
+
+            <Button
+               Text="Convertir"
+               Clicked="OnKmToMButtonClick" />
+
+            <Label
+               x:Name="ResultadoKmaM"
+               Text="Resultado: {Binding Resultado}" />
+
+            <Button
+               Text="Limpiar campos"
+               Clicked="OnClearKmButtonClick" />
+
+         </StackLayout>
+      </ContentPage>
+
+     <!-- Pestaña 2 -->
+      <ContentPage Title="m a cm">
+         <StackLayout>
+
+            <Label
+               Text="Ingrese la distancia en metros:" />
+            <Entry
+               x:Name="Metros"
+               Placeholder="Ingrese metros" />
+            <Button
+               Text="Convertir"
+               Clicked="OnMToCmButtonClick" />
+            <Label
+               x:Name="ResultadoMaCm"
+               Text="Resultado: " />
+            <Button
+               Text="Limpiar"
+               Clicked="OnClearKmButtonClick" />
+         </StackLayout>
+      </ContentPage>
+
+</TabbedPage>
